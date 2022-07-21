@@ -1,0 +1,25 @@
+<mat-nav-list>
+
+  <div class="logo py-4">
+    <img src="../../../assets/EasyTrackLogo.PNG" alt="Company Logo">
+  </div>
+  <mat-divider></mat-divider>
+  <h2 matSubheader class="mt-2">Application</h2>
+  <a mat-list-item routerLink="/" routerLinkActive="list-item-active">
+    <mat-icon>home</mat-icon> Home
+  </a>
+  <a mat-list-item routerLink="/dashboard" routerLinkActive="list-item-active">
+    <mat-icon>dashboard</mat-icon> Dashboard
+  </a>
+
+  <a mat-list-item routerLink="/books" routerLinkActive="list-item-active">
+    <mat-icon (click)="callme()" >{{BooksIcon}}</mat-icon>Books
+  </a>
+  <a mat-list-item><mat-icon>edit</mat-icon> Link4</a>
+  <a mat-list-item><mat-icon>edit</mat-icon> Link5</a>
+
+</mat-nav-list>
+
+
+
+

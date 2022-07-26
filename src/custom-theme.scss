@@ -17,6 +17,8 @@ $angular-dark-theme: mat.define-dark-theme((
 
 .darkMode {
   @include mat.all-component-colors($angular-dark-theme);
+  --neutral-foreground-rest: white;
+
 }
 
 // Emit theme-dependent styles for common features used across multiple components.

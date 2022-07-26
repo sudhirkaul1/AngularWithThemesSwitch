@@ -1,0 +1,52 @@
+// @import "../home2/home2.component.scss" ;
+
+
+body {
+  padding: 1em;
+}
+
+
+// @media (forced-colors: active) {
+//   :host {
+//     background: ButtonFace;
+//   }
+// }
+
+fluent-data-grid{
+  max-height: 30em;
+  overflow-y: auto;
+  // background-color: white;
+}
+
+
+// fluent-data-grid-cell{
+//   background-color: green;
+//   height: 10px;
+//   overflow-y: auto;
+// }
+
+// .test {
+//   color: white;
+// }
+
+.dark{
+  --neutral-foreground-rest: white;
+}
+
+.light{
+  --neutral-foreground-rest: black;
+}
+
+:host {
+  //color: white;
+
+
+}
+
+
+
+@media (forced-colors: active) {
+  :host {
+    color: white;
+  }
+}

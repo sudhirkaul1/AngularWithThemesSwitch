@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { FluentGridComponent } from './components/fluent-grid/fluent-grid.component';
+import { FluentUiComponent } from './components/fluent-ui/fluent-ui.component';
 import { Home2Component } from './components/home2/home2.component';
+import { PrimengDynamicComponent } from './primeng-table/primeng-dynamic/primeng-dynamic.component';
+import { PrimengPaginationComponent } from './primeng-table/primeng-pagination/primeng-pagination.component';
 
 const routes: Routes = [
   {
@@ -31,6 +35,10 @@ const routes: Routes = [
 
   { path: 'home2',component: Home2Component },
   { path: 'dashboard',component: DashboardComponent },
+  { path: 'fluentui',component: FluentUiComponent },
+  { path: 'fluentgrid',component: FluentGridComponent },
+  { path: 'dynamicTable', component: PrimengDynamicComponent },
+  { path: 'primengPagination', component: PrimengPaginationComponent}
 
 ];
 

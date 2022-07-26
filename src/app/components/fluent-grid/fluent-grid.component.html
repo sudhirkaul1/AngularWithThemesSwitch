@@ -1,0 +1,41 @@
+<!-- <fluent-data-grid
+  id="defaultGrid"
+  style="max-height: 30em; overflow-y: auto; background-color: white; ">
+</fluent-data-grid> -->
+
+<fluent-combobox placeholder="Select a graphics card">
+  <fluent-option value="1">GTX 1060</fluent-option>
+  <fluent-option value="2">GTX 1070</fluent-option>
+  <fluent-option value="3">GTX 1080</fluent-option>
+  <fluent-option value="4" disabled>GTX 1090</fluent-option>
+</fluent-combobox>
+
+
+<fluent-data-grid style="border:none">
+  <fluent-data-grid-row row-type="default" style="border:none;grid-template-columns: 20% 80%;" role="row" grid-template-columns="20% 80%">
+      <fluent-data-grid-cell cell-type="default" grid-column="1" tabindex="-1" role="default" style="grid-column: 1;">
+                <fluent-combobox placeholder="Select a graphics card">
+                  <fluent-option value="1">GTX 1060</fluent-option>
+                  <fluent-option value="2">GTX 1070</fluent-option>
+                  <fluent-option value="3">GTX 1080</fluent-option>
+                  <fluent-option value="4" disabled>GTX 1090</fluent-option>
+                </fluent-combobox>
+
+                <!-- <h3>With autocomplete</h3>
+                <fluent-combobox autocomplete="both" placeholder="Select a graphics card">
+                  <fluent-option value="1">GTX 1060</fluent-option>
+                  <fluent-option value="2">GTX 1070</fluent-option>
+                  <fluent-option value="3">GTX 1080</fluent-option>
+                  <fluent-option value="4" disabled>GTX 1090</fluent-option>
+                </fluent-combobox>
+
+                <h3>Disabled</h3>
+                <fluent-combobox disabled placeholder="Select an option">
+                  <fluent-option value="1">Option 1</fluent-option>
+                  <fluent-option value="2">Option 2</fluent-option>
+                  <fluent-option value="3">Option 3</fluent-option>
+                </fluent-combobox> -->
+
+      </fluent-data-grid-cell>
+  </fluent-data-grid-row>
+</fluent-data-grid>

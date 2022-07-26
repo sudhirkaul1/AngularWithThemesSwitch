@@ -7,8 +7,7 @@ import { MatSlideToggleChange } from '@angular/material/slide-toggle';
   styleUrls: ['./custom-layout.component.scss']
 })
 export class CustomLayoutComponent implements OnInit {
-  isChecked: boolean = false;
-  mode: string = '';
+
 
  sideBarOpen = true;
 
@@ -22,8 +21,6 @@ export class CustomLayoutComponent implements OnInit {
     this.sideBarOpen = !this.sideBarOpen;
   }
 
- changed(event: MatSlideToggleChange): void{
 
- }
 
 }

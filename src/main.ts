@@ -4,6 +4,15 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
+import { provideFluentDesignSystem,
+         fluentCard,
+         fluentButton,
+         fluentTextField }
+from '@fluentui/web-components';
+
+
+//microsoft/fluent-components';
+
 if (environment.production) {
   enableProdMode();
 }
@@ -11,3 +20,9 @@ if (environment.production) {
 platformBrowserDynamic()
   .bootstrapModule(AppModule)
   .catch(err => console.error(err));
+
+
+provideFluentDesignSystem().register(fluentCard(),
+                                     fluentButton(),
+                                     fluentTextField());
+

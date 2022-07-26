@@ -19,7 +19,7 @@ import { SlidenavComponent } from './components/slidenav/slidenav.component';
 import { Home2Component } from './components/home2/home2.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 
-
+import { PrimengTableModule } from './primeng-table/primeng-table.module';
 
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -28,10 +28,15 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTreeModule} from '@angular/material/tree';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { FluentUiComponent } from './components/fluent-ui/fluent-ui.component';
 
 // import { AuthModule } from '@auth0/auth0-angular';
 
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { FluentGridComponent } from './components/fluent-grid/fluent-grid.component';
+
 @NgModule({
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -53,6 +58,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatMenuModule,
     MatTreeModule,
     MatSlideToggleModule,
+    PrimengTableModule
+
   ],
   declarations: [AppComponent,
                  CustomLayoutComponent,
@@ -60,6 +67,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
                  SlidenavComponent,
                 //  Home2Component,
                  DashboardComponent,
+                FluentUiComponent,
+                FluentGridComponent,
 
                  ],
   providers: [APP_ROUTE_PROVIDER],

@@ -13,9 +13,20 @@
   </a>
 
   <a mat-list-item routerLink="/books" routerLinkActive="list-item-active">
-    <mat-icon (click)="callme()" >{{BooksIcon}}</mat-icon>Books
+    <mat-icon>{{BooksIcon}}</mat-icon>Books
   </a>
-  <a mat-list-item><mat-icon>edit</mat-icon> Link4</a>
+  <a mat-list-item routerLink="/fluentui" routerLinkActive="list-item-active">
+    <mat-icon></mat-icon>FluentUI
+  </a>
+  <a mat-list-item routerLink="/fluentgrid" routerLinkActive="list-item-active">
+    <mat-icon></mat-icon>FluentGrid
+  </a>
+  <a mat-list-item routerLink="/dynamicTable" routerLinkActive="list-item-active">
+    <mat-icon></mat-icon>PrimeNG-DynamicTable
+  </a>
+  <a mat-list-item routerLink="/primengPagination" routerLinkActive="list-item-active">
+    <mat-icon></mat-icon>PrimeNG-Pagination
+  </a>
   <a mat-list-item><mat-icon>edit</mat-icon> Link5</a>
 
 </mat-nav-list>

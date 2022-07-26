@@ -1,16 +1,37 @@
-<mat-card><mat-card-header class="w-100"><mat-card-title-group class="w-100"><mat-card-title class="abp-card-title"
-  >{{'::Menu:Books'|abpLocalization}}</mat-card-title
-></mat-card-title-group></mat-card-header><mat-card-content><table
-mat-table
-[dataSource]="book.items"
-class="w-100"
-matSort
-(matSortChange)="changeSort($event)"
-><tr mat-header-row *matHeaderRowDef="columns"></tr><tr mat-row *matRowDef="let myRowData; columns: columns"></tr><ng-container matColumnDef="name"><th mat-header-cell *matHeaderCellDef mat-sort-header>{{'::Name'|abpLocalization}}</th><td mat-cell *matCellDef="let element">{{element.name}}</td></ng-container><ng-container matColumnDef="type"><th mat-header-cell *matHeaderCellDef mat-sort-header>{{'::Type'|abpLocalization}}</th><td mat-cell *matCellDef="let element">{{'::Enum:BookType:'+element.type|abpLocalization}}</td></ng-container><mat-text-column
-  [headerText]="'::Price' | abpLocalization"
-  name="price"
-></mat-text-column></table><mat-paginator
-[length]="book.totalCount"
-[pageSize]="list.maxResultCount"
-(page)="changePage($event)"
-></mat-paginator></mat-card-content></mat-card>
+<p-card>
+  <ng-template pTemplate="title">
+    {{'::Menu:Books'|abpLocalization}}
+  </ng-template>
+  <!-- <p-divider type="solid"></p-divider> -->
+
+<br>
+<p-table
+  [value]="book.items"
+  [resizableColumns]="true"
+  styleClass="p-datatable-gridlines"
+  [autoLayout]="true"
+  >
+
+  <!-- <ng-template pTemplate="caption">
+    Header
+   </ng-template> -->
+
+  <ng-template pTemplate="header">
+      <tr>
+          <th pSortableColumn="name">Name <p-sortIcon field="name"></p-sortIcon></th>
+          <th pSortableColumn="type">Type <p-sortIcon field="type"></p-sortIcon></th>
+          <th pSortableColumn="price">Price <p-sortIcon field="price"></p-sortIcon></th>
+
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-book>
+      <tr>
+          <td>{{ book.name  }}</td>
+          <td>{{ '::Enum:BookType:'+ book.type | abpLocalization }}</td>
+          <td>{{ book.price }}</td>
+
+      </tr>
+  </ng-template>
+</p-table>
+
+</p-card>

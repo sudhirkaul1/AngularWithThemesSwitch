@@ -13,13 +13,4 @@ export class SlidenavComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  callme(){
-
-  }
-
-
-  onSelectedItem(event: Event){
-    console.log(event);
-  }
-
 }

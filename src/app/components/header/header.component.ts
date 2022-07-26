@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit {
 
 
   changed(event: MatSlideToggleChange): void{
-    this.mode = event.checked ? 'light_mode' : 'nightlight_round' ;
+    this.mode = event.checked ? 'light_mode' : 'nightlight_round'   ;
     document.body.classList.toggle('darkMode');
   }
 }

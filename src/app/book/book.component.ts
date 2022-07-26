@@ -5,6 +5,7 @@ import { BookDto  } from "@proxy/application/contracts/books";
 
 import { PageEvent } from "@angular/material/paginator";
 import { Sort } from "@angular/material/sort";
+import { JsonPipe } from "@angular/common";
 
 @Component(
   {
@@ -16,10 +17,11 @@ import { Sort } from "@angular/material/sort";
 export class BookComponent implements OnInit{
   book={items:[],totalCount:0} as PagedResultDto<BookDto>;
   columns:string[]=["name","type","price"];
+  colNameIterator: number;
 
   constructor( public readonly list:ListService,private bookService:BookService)
   {
-     this.list.maxResultCount=2;
+    //  this.list.maxResultCount=2;
   }
 
   ngOnInit(){
@@ -27,8 +29,14 @@ export class BookComponent implements OnInit{
     this.list.hookToQuery(bookStreamCreator).subscribe(
       (response)=>{
          this.book=response;
+
+
         });
+
       }
+
+      Coldefs: string[];
+
       changePage( pageEvent:PageEvent )
       {this.list.page=pageEvent.pageIndex;}
 

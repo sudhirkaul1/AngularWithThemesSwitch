@@ -1,0 +1,31 @@
+<!-- <div class="card" > -->
+<p-table [columns]="cols" [value]="book.items"
+[paginator]="true" [rows]="5"
+[showCurrentPageReport]="true"
+responsiveLayout="scroll"
+currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+[rowsPerPageOptions]="[5,10,20]"
+pageLinkSize="3"
+>
+  <ng-template pTemplate="header" let-columns>
+      <tr>
+          <th *ngFor="let col of columns">
+              {{col.header}}
+          </th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+      <tr>
+          <td *ngFor="let col of columns">
+              {{rowData[col.field]}}
+          </td>
+      </tr>
+  </ng-template>
+  <!-- <ng-template pTemplate="paginatorleft">
+    <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+</ng-template> -->
+<ng-template pTemplate="paginatorright">
+  <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+</ng-template>
+</p-table>
+<!-- </div> -->
